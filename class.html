@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+const moyenne = (notes) => {
+     let sum = 0 
+     for (let note of notes) {
+         sum = sum + note
+     }
+     return sum / notes.length
+}
+// la class
+class Student{
+    ecole = 'Basile'
+    constructor( nom, prenom){
+this.nom = nom
+this.prenom= prenom
+    }
+// les methodes
+setNotes(notes){
+this.notes = notes
+}
+ canPass(){
+    return moyenne(this.notes) >= 10
+
+ }
+
+}  
+const enda = new Student('enda', 'ka')
+const aby = new Student('aby', 'ka')
+enda.setNotes([5,15,9])
+aby.setNotes([15,17,19])
+console.log(enda.canPass(), aby.canPass())
+class Rectangle{
+    constructor(width , height){
+        this.width=width
+        this.height= height
+    }
+    
+
+}
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>
