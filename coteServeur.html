@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <script></script>   
+ <div id="machin\bidule"></div>
+ <div id="machin:bidule"></div>
+ 
+ <script>
+   console.log('#machin\bidule')               // "#machinidule" (\b est le caractère de contrôle retour arrière)
+   document.querySelector('#machin\bidule')    // ne correspond à rien
+ 
+   console.log('#machin\\bidule')              // "#machin\bidule"
+   console.log('#machin\\\\bidule')            // "#machin\\bidule"
+   document.querySelector('#machin\\\\bidule') // correspond au premier div
+ 
+   document.querySelector('#machin:bidule')    // ne correspond à rien
+   document.querySelector('#machin\\:bidule')  // correspond au second div
+ </script>
+ 
+</head>
+<body>
+    
+</body>
+</html>
